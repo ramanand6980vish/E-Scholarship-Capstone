@@ -1,0 +1,100 @@
+/* OTR  CSS*/
+.container {
+    padding: 15px ;
+  width: 40%;
+  margin: 100px auto;
+  text-align: center;
+  font-family: Arial;
+  /* border: 2px solid red; */
+  margin-top: 2%;
+
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.step {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: lightgray;
+  line-height: 35px;
+  margin: auto;
+}
+
+.active .circle {
+  background: #2563eb;
+  color: white;
+  transform: scale(1.2);
+}
+
+.blur {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.blur .circle {
+  background: #e0e0e0;
+  color: #999;
+}
+
+.blur p {
+  color: #999;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto  ;
+  gap: 10px;
+  width: 75%;
+}
+
+input,
+button {
+  padding: 10px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+}
+
+/* OTP BOX */
+.otp-box {
+  padding-top: 20px;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-in;
+  gap: 2%;
+}
+
+/* Error Message */
+.error-text {
+  color: red;
+}
+
+.success-text {
+  color: green;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,276 @@
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6fb;
+    color: #222;
+}
+
+/* TOP BAR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.topbar h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user {
+    font-weight: 500;
+}
+
+/* HERO SECTION */
+.home-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.welcome {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    color: #e6ebec;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* MARQUEE */
+marquee {
+    background: #e0e7ff;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+/* .marq{ */
+    /* width: 20%; */
+/* } */
+
+marquee a {
+    text-decoration: none;
+    color: #1d4ed8;
+    font-weight: 500;
+}
+
+/* DASHBOARD CARDS */
+.main-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.main-card {
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.main-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 40px;
+}
+
+.main-card h2 {
+    margin: 10px 0;
+}
+
+.feature-list {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
+.main-card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.main-card button:hover {
+    background: #3730a3;
+}
+
+/* STATS SECTION */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.stats-box {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    width: 500px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.stats-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.stat h2 {
+    margin: 0;
+    color: #4f46e5;
+}
+
+/* RECENT TABLE */
+.recent-section {
+    padding: 30px;
+}
+
+.recent-section h2 {
+    text-align: center;
+}
+
+.table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.table th {
+    background: #4f46e5;
+    color: white;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: white;
+}
+
+.status.pending {
+    background: orange;
+}
+
+.status.approved {
+    background: green;
+}
+
+.status.under-review {
+    background: #3b82f6;
+}
+
+/* OTR */
+.otr-card {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    width: 70%;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.otr-card button {
+    padding: 10px 20px;
+    border: none;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CHATBOT */
+.chatbot-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4f46e5;
+    color: white;
+    font-size: 26px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+.footer-section {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: white;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table {
+        width: 95%;
+    }
+
+    .otr-card {
+        width: 90%;
+    }
+}

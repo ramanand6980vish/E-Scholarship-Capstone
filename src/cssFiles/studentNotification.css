@@ -1,0 +1,190 @@
+/* studentNotification.css */
+
+.notify-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Bell container */
+.bell-box {
+  position: relative;
+  cursor: pointer;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.bell-box:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* PNG image */
+.bell-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+transform: rotate(15deg);}
+
+/* Notification count badge */
+.notify-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.35);
+}
+
+/* Dropdown panel */
+.notify-panel {
+  position: absolute;
+  top: 54px;
+  right: 0;
+  width: 360px;
+  max-height: 460px;
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+  z-index: 999;
+  animation: slideDown 0.2s ease;
+}
+
+.notify-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notify-panel::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+}
+
+/* Header */
+.notify-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.notify-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #64748b;
+  transition: 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #0f172a;
+  transform: rotate(90deg);
+}
+
+/* Empty */
+.empty-text {
+  padding: 28px 18px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Notification card */
+.notify-card {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f8fafc;
+  transition: background 0.2s ease;
+}
+
+.notify-card:hover {
+  background: #f8fafc;
+}
+
+.notify-card:last-child {
+  border-bottom: none;
+}
+
+.notify-card h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.notify-card p {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.notify-card small {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .notify-panel {
+    width: 92vw;
+    right: -8px;
+    top: 52px;
+    max-height: 72vh;
+  }
+
+  .bell-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bell-img {
+    width: 28px;
+    height: 28px;
+  }
+}
