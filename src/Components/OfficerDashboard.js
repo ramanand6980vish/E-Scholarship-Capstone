@@ -13,8 +13,8 @@ function OfficerDashboard() {
 
   // Dummy students data
   useEffect(() => {
-    if (!login) {                 
-    // if (login) {                 change here for login issue
+    // if (!login) {                  change here for login issue
+    if (login) {                 
       setStudents([
         {
           id: 1,
