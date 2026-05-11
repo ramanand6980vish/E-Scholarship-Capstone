@@ -25,6 +25,8 @@ import OfficerLogin from './Components/OfficerLogin';
 import OfficerDashboard from './Components/OfficerDashboard';
 import StudentProfile from './Components/StudentProfile';
 import StudentNotification from './Components/StudentNotification';
+import AppliedStudentsDashboard from './Components/AppliedStudentDashboard';
+import StudentView4Officer from './Components/StudentView4Officer';
 
 function App() {
 
@@ -104,16 +106,28 @@ function App() {
                     </ProtectedRoute>}
                 />
 
+                <Route path="/appliedStudentDashboard" element={
+                    <>
+                        <h3>Applied Students Dashboard</h3>
+                        <AppliedStudentsDashboard />
 
+                    </>
+                }
+                />
 
 
                 {/* <Route path="/officer" element={<Officer />} /> */}
                 <Route path="/officer-login" element={<OfficerLogin />} />
 
-                <Route path='officer-dashboard' element={
-                    <ProtectedRoute>
+                <Route path='/officer-dashboard' element={
+                    // <ProtectedRoute>
                         <OfficerDashboard />
-                    </ProtectedRoute>
+                    // </ProtectedRoute>
+                }
+                />
+
+                <Route path='/studentView4Officer' element={
+                   <StudentView4Officer/>
                 }
                 />
 

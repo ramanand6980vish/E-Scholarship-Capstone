@@ -17,7 +17,7 @@ function Navbar() {
 
         if (role === "student") navigate("/student-login");
         if (role === "officer") navigate("/officer-login");
-        if (role === "admin") navigate("/admin-login");
+        // if (role === "admin") navigate("/admin-login");
     };
 
     // close when clicked outside
@@ -54,9 +54,6 @@ function Navbar() {
                             🧑‍💼 Officer
                         </li>
 
-                        <li onClick={() => handleSelect("admin")}>
-                            🛡️ Admin
-                        </li>
 
                     </ul>
                 )}
