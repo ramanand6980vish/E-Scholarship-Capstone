@@ -27,7 +27,10 @@ import StudentProfile from './Components/StudentProfile';
 import StudentNotification from './Components/StudentNotification';
 import AppliedStudentsDashboard from './Components/AppliedStudentDashboard';
 import StudentView4Officer from './Components/StudentView4Officer';
-
+import SchemeCards from './Components/SchemesCards';
+import ReuploadNotifications from './Components/ReuploadNotifications';
+import DummyAdhar from './Components/DummyAdhar';
+   
 function App() {
 
     return (
@@ -36,6 +39,77 @@ function App() {
 
             <Navbar />
             <ScrollToTop />
+
+
+            {/* <div className="auth-bg">
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/otr" element={<OTR />} />
+
+                    <Route path="/officer-login" element={<OfficerLogin />} />
+
+
+                    <Route path='/faceKYC' element={<FaceKYC />} />
+
+                    <Route path="/track" element={<TrackApplication />} />
+                <Route path="/help" element={<HelpDesk />} />
+                </Routes>
+            </div> */}
+
+
+
+            <Routes>
+
+        
+                {/* AUTH PAGES */}
+                <Route
+                    path="/login"
+                    element={
+                        <div className="auth-bg">
+                            <Login />
+                        </div>
+                    }
+                />
+
+                <Route
+                    path="/officer_login"
+                    element={
+                        <div className="auth-bg">
+                            <OfficerLogin />
+                        </div>
+                    }
+                />
+
+                <Route
+                    path="/otr"
+                    element={
+                        <div className="auth-bg">
+                            <OTR />
+                        </div>
+                    }
+                />
+
+                 <Route
+                    path="/help"
+                    element={
+                        <div className="auth-bg">
+                            <HelpDesk />
+                        </div>
+                    }
+                />
+
+                 <Route
+                    path="/track"
+                    element={
+                        <div className="auth-bg">
+                            <TrackApplication />
+                        </div>
+                    }
+                />
+
+            </Routes>
+
+
 
             <Routes>
 
@@ -46,11 +120,8 @@ function App() {
                     </>
                 } />
 
-                <Route path="/otr" element={<OTR />} />
 
-                <Route path="/login" element={<Login />} />
-                <Route path="/track" element={<TrackApplication />} />
-                <Route path="/help" element={<HelpDesk />} />
+
 
                 <Route path="/studentDashboard" element={
                     <ProtectedRoute>
@@ -62,6 +133,9 @@ function App() {
                     <LoggedInHomePage />
                 } />
 
+                <Route path="/schemes" element={
+                    <SchemeCards />
+                } />
 
                 {/* <Route path="/studentDashboard" element={
                          <StudentDashboard />
@@ -81,12 +155,15 @@ function App() {
                 }
                 /> */}
 
-                {/* <Route path="/studentNotification" element={
-                    <ProtectedRoute>
+                { <Route path="/studentNotification" element={
+                    // <ProtectedRoute>
                         <StudentNotification />
-                    </ProtectedRoute>       
+                    // </ProtectedRoute>       
                 }
-                /> */}
+
+                /> }
+
+            
 
                 <Route path="/studentProfile" element={
                     <ProtectedRoute>
@@ -115,27 +192,32 @@ function App() {
                 }
                 />
 
+                <Route path="/dummyAdhar" element={
+                    <DummyAdhar />
+                }
+                />
+
 
                 {/* <Route path="/officer" element={<Officer />} /> */}
-                <Route path="/officer-login" element={<OfficerLogin />} />
 
                 <Route path='/officer-dashboard' element={
                     // <ProtectedRoute>
-                        <OfficerDashboard />
+                    <OfficerDashboard />
                     // </ProtectedRoute>
                 }
                 />
 
                 <Route path='/studentView4Officer' element={
-                   <StudentView4Officer/>
+                    <StudentView4Officer />
                 }
                 />
 
-                <Route path='/faceKYC' element={<FaceKYC />} />
+                {/* <Route path='/faceKYC' element={<FaceKYC />} /> */}
 
 
 
             </Routes>
+            
 
             <Footer />
 

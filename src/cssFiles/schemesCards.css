@@ -1,0 +1,200 @@
+/* PAGE */
+
+.scheme-page{
+
+    min-height: 100vh;
+
+    background: #f4f7fb;
+
+    padding: 50px 40px;
+}
+
+/* HEADER */
+
+.scheme-header{
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.scheme-header h1{
+
+    font-size: 48px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+
+    margin-bottom: 10px;
+}
+
+.scheme-header p{
+
+    font-size: 18px;
+
+    color: #64748b;
+}
+
+/* SECTION */
+
+.scheme-section{
+
+    margin-bottom: 60px;
+}
+
+.section-title{
+
+    font-size: 32px;
+
+    color: #0f172a;
+
+    margin-bottom: 25px;
+
+    border-left: 6px solid #2563eb;
+
+    padding-left: 14px;
+}
+
+/* GRID */
+
+.scheme-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+/* CARD */
+
+.scheme-card{
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.scheme-card::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+}
+
+.scheme-card:hover{
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+
+.scheme-icon{
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+
+.scheme-card h3{
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #1e293b;
+
+    margin-bottom: 25px;
+
+    min-height: 60px;
+}
+
+/* BUTTON */
+
+.apply-btn{
+
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 26px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.apply-btn:hover{
+
+    transform: scale(1.04);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .scheme-page{
+        padding: 30px 20px;
+    }
+
+    .scheme-header h1{
+        font-size: 36px;
+    }
+
+    .section-title{
+        font-size: 26px;
+    }
+}

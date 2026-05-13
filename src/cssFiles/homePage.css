@@ -264,7 +264,7 @@ marquee a {
 }
 
 .info {
-  background: #6c63ff;
+  background: #1985cd;
 }
 
 /* FOOTER */
@@ -342,3 +342,18 @@ marquee a {
   margin: 30px;
 }
 
+.tag_info{
+  background: #3ed7c5;
+  color: white;
+  border: none;
+  min-width: 80px;
+  border-radius: 40px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  /* cursor: pointer; */
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}

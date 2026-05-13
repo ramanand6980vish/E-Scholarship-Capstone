@@ -34,6 +34,9 @@ function Login() {
 
       if (res.ok) {
         localStorage.setItem("token", data);
+        localStorage.setItem("aadhaarNumber", aadhaar);
+        
+         window.dispatchEvent(new Event("FETCH_NOTIFICATIONS"));
 
         setMsgColor("green");
         setMessage("Login Successful");

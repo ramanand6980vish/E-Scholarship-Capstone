@@ -7,6 +7,8 @@ function Logout() {
     const handleLogout = () => {
 
         localStorage.removeItem("token");
+        localStorage.removeItem("aadhaarNumber");
+        
         window.location.reload();
         navigate("/");
     };

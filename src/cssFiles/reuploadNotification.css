@@ -1,0 +1,57 @@
+.notify-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.check-btn {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.check-btn:disabled {
+    background: #8bbbf7;
+}
+
+.message-box {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f1f1f1;
+    border-left: 4px solid #007bff;
+    border-radius: 6px;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.warning {
+    border-left: 5px solid #ff4d4f;
+    background: #fff5f5;
+}
+
+.app-block {
+    margin-top: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}

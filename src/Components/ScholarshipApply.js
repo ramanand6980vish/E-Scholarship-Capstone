@@ -10,6 +10,7 @@ function ScholarshipApply() {
   const [currentClass, setCurrentClass] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [schemeType, setSchemeType] = useState("");
+  const [currentClassSession, setCurrentClassSession] = useState("");
 
   const [ews, setEws] = useState(false);
   const [disability, setDisability] = useState(false);
@@ -22,7 +23,7 @@ function ScholarshipApply() {
   const [agree, setAgree] = useState(false);
 
   const [extraFiles, setExtraFiles] = useState({
-    photoPath: null,
+    photo: null,
     signature: null,
     incomeCertificate: null,
     casteCertificate: null,
@@ -88,6 +89,7 @@ function ScholarshipApply() {
     formData.append("casteCategory", casteCategory);
     formData.append("currentClass", currentClass);
     formData.append("mobileNumber", mobileNumber);
+    formData.append("currentClassSession", currentClassSession);
 
 
     formData.append("ews", ews);
@@ -212,12 +214,38 @@ function ScholarshipApply() {
                   <div className="row">
                     <div className="field">
                       <RequiredLabel text="Current Class" />
-                      <select onChange={(e) => setCurrentClass(e.target.value)} required>
+
+                      <select
+                        value={currentClass}
+                        onChange={(e) => setCurrentClass(e.target.value)}
+                        required
+                      >
                         <option value="">Select</option>
-                        <option value="10">10th</option>
-                        <option value="12">12th</option>
-                        <option value="grad">Under Graduation</option>
-                        <option value="pg">Post Graduation</option>
+                        {/* PRE-MATRIC */}
+                        {type === "pre" && (
+                          <>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                            <option value="4">4th</option>
+                            <option value="5">5th</option>
+                            <option value="6">6th</option>
+                            <option value="7">7th</option>
+                            <option value="8">8th</option>
+                            <option value="9">9th</option>
+                            <option value="10">10th</option>
+                          </>
+                        )}
+
+                        {/* POST-MATRIC */}
+                        {type === "post" && (
+                          <>
+                            <option value="11">11th</option>
+                            <option value="12">12th</option>
+                            <option value="grad">Under Graduation</option>
+                            <option value="pg">Post Graduation</option>
+                          </>
+                        )}
                       </select>
                     </div>
 
@@ -232,7 +260,33 @@ function ScholarshipApply() {
                     </div>
                   </div>
 
+                  <div className="row">
+                    <div className="field">
+                      <RequiredLabel text="Mobile Number" />
+                      <input
+                        type="text"
+                        placeholder="Enter Mobile Number"
+                        value={mobileNumber}
+                        onChange={(e) => setMobileNumber(e.target.value)}
+                        required
+                      />
+                    </div>
 
+                    <div className="field">
+                      <RequiredLabel text="Current Class Session" />
+                      <input
+                        type="text"
+                        placeholder="2025-2027"
+                        value={currentClassSession}
+                        onChange={(e) => setCurrentClassSession(e.target.value)}
+                        required
+                      />
+
+
+
+                    </div>
+
+                  </div>
 
 
                   {/* Row3 */}
@@ -273,16 +327,32 @@ function ScholarshipApply() {
                     </div>
                   </div>
 
+                  <div className="row">
+
+                    <div className="field">
+                      <RequiredLabel text="Aadhaar Card" />
+                      <input
+                        type="file"
+                        name="aadhaarCard"
+                        onChange={handleFileChange}
+                        required
+                      />
+                    </div>
+
+                  </div>
+
                   {/* FILE SECTION */}
                   <div className="file-box">
-                    <h3>Special Category Documents</h3>
-                    <p style={{ fontSize: "13px" }} >Upload documents only if applicable to your category (EWS, Disability, or Gap).
-                      Ensure all certificates are valid, clearly visible, and issued by an authorized authority.</p>
+                    {/* <h3> Documents</h3> */}
 
-                    {(currentClass === "12" || currentClass === "grad" || currentClass === "pg") && (
+                    {["12", "grad", "pg"].includes(currentClass) && (
                       <div>
                         <RequiredLabel text="10th Marksheet" />
-                        <input type="file" name="tenMarksheet" onChange={handleFileChange} />
+                        <input
+                          type="file"
+                          name="tenMarksheet"
+                          onChange={handleFileChange}
+                        />
                       </div>
                     )}
 
@@ -303,6 +373,9 @@ function ScholarshipApply() {
 
                   {/* EXTRA OPTIONS */}
                   <div className="checkbox-box">
+                    <h3>Special Category Documents</h3>
+                    <p style={{ fontSize: "13px" }} >Upload documents only if applicable to your category (EWS, Disability, or Gap).
+                      Ensure all certificates are valid, clearly visible, and issued by an authorized authority.</p>
 
                     <div>
                       <input type="checkbox" onChange={() => setEws(!ews)} />
@@ -327,7 +400,7 @@ function ScholarshipApply() {
                   <div className="row">
                     <div className="field">
                       <RequiredLabel text="Photo" />
-                      <input type="file" name="photoPath" onChange={handleFileChange} required />
+                      <input type="file" name="photo" onChange={handleFileChange} required />
                     </div>
                     <div className="field">
                       <RequiredLabel text="Signature" />

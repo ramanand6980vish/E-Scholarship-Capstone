@@ -181,7 +181,7 @@ function HomePage() {
                     </div>
 
                     <div className="announcement-item">
-                        <span className="tag info">INFO</span>
+                        <span className="tag_info">INFO</span>
                         <p>
                             Scholarship status tracking portal has been activated.
                         </p>
@@ -191,10 +191,10 @@ function HomePage() {
 
             </div>
 
-            {/* FOOTER */}
+            {/* FOOTER
             <div className="footer-section">
                 <p>© 2026 E-Scholarship Automation System | Digital India Initiative</p>
-            </div>
+            </div> */}
         </>
     );
 }

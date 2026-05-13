@@ -1,15 +1,35 @@
 /* OTR  CSS*/
-.container {
-    padding: 15px ;
-  width: 40%;
-  margin: 100px auto;
-  text-align: center;
-  font-family: Arial;
-  /* border: 2px solid red; */
-  margin-top: 2%;
 
+/* OTR CSS */
+
+.auth-bg{
+  min-height: 80vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("../Assets/Login_Register_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.container {
+  padding: 20px;
+  width: 40%;
+  margin: 100px auto;
+  margin-top: 2%;
+
+  text-align: center;
+  font-family: Arial;
+
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Steps */
 .steps {
   display: flex;
   justify-content: space-between;
@@ -51,10 +71,11 @@
   color: #999;
 }
 
+/* Card */
 .card {
   display: flex;
   flex-direction: column;
-  margin: 50px auto  ;
+  margin: 50px auto;
   gap: 10px;
   width: 75%;
 }
@@ -68,6 +89,7 @@ button {
   background: #2563eb;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
 /* OTP BOX */
@@ -96,5 +118,12 @@ button {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
   }
 }

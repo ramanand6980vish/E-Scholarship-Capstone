@@ -13,11 +13,18 @@ function Navbar() {
     };
 
     const handleSelect = (role) => {
-        setLoginOpen(false);
 
-        if (role === "student") navigate("/student-login");
-        if (role === "officer") navigate("/officer-login");
-        // if (role === "admin") navigate("/admin-login");
+        if (role === "student") {
+            navigate("/login");
+            console.log("Navigating to student login");
+        }
+
+        if (role === "officer") {
+            navigate("/officer-login");
+            console.log("Navigating to officer login");
+        }
+
+        setLoginOpen(false);
     };
 
     // close when clicked outside
@@ -33,7 +40,7 @@ function Navbar() {
     }, []);
 
     return (
- 
+
         <ul className="nav-links">
 
             {/* LOGIN DROPDOWN */}

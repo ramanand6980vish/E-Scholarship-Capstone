@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #e0e7ff, #f4f6fb);
+    /* background: linear-gradient(135deg, #e0e7ff, #f4f6fb); */
+    /* padding-top: 20px; */
 }
 
 /* CARD */
